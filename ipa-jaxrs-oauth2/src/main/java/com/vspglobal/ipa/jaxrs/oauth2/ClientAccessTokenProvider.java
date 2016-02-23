@@ -31,7 +31,7 @@ public class ClientAccessTokenProvider implements AccessTokenProvider {
 				for(String requiredScope : scopes) {
 					boolean found = false;
 					for(String availScope : CACHE.scopes){
-						if(availScope == requiredScope) {
+						if(availScope.equals(requiredScope)) {
 							found = true;
 							break;
 						}
